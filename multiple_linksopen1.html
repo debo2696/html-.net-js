@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml">;
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+        function OpenTabs() {
+            var urls = document.getElementById('txtUrl').value;
+            for (var i = 0; i < urls.split(';').length; i++) {
+                window.open(urls.split(';')[i], '_blank');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <input id="txtUrl" type="text" value="https://www.google.com/; https://www.youtube.com/watch?v=Bey4XXJAqS8&list=PLr62MtdgiCl6KYDn3hMQ1xmA2-909TtHA" />
+        <input type="submit" value="Open" onclick="OpenTabs(); return false;" />
+    </div>
+    </form>
+</body>
+</html>
